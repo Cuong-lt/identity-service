@@ -1,0 +1,8 @@
+logout với JWT:
+	- Tạo id cho Token (dung UUID.randomUUID.toString).
+	- Tạo entity InvalidatedToken (id, expiryTime) chứa các token được logout.
+	- Tạo repository cho entity.
+	- Sửa function verifyToken.
+	- Tạo function logout trong AuthenticationService.
+	- Tạo endpoint logout trong AuthenticationController.
+	- Cấp quyền public cho endpoint.

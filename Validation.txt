@@ -1,0 +1,24 @@
+CUSTOM VALIDATION:
+	- B1: tạo package xử lí riêng cho các validation.
+	- B2: tạo interface với:
+		tên: validation cần custom.
+		3 annotation:
+			+ @target: xác định validation hoạt động ở đâu.
+			+ @Retention: xác định validation được chạy lúc nào ( Runtime hay Compiletime)			+ @Constraint (validateBy = {} ) :lớp nào sử dụng valid này.
+		3 properties mặc định:
+  			+ message: thông báo
+			+ groups
+			+ payload
+		các properties custom:
+
+	- B3: tạo class implement interface ConstraintValidator<(interface valid vừa tạo), (kiểu field sử dụng valid) >
+		Override 2 method:
+			+ isValid: xử lý logic với properties custom trên interface.
+			+ initialize: khởi tạo valid ngay khi ctrinh chạy.
+	- B4: tạo ErrorCode: nhận exception khi field ko thỏa mãn validation.
+	- B5 : sử dụng annotation vào các field : @(Tên validation)(properties custom = ?, message = "(Error code)").
+
+
+VALIDATION nâng cao:
+	- 
+				
